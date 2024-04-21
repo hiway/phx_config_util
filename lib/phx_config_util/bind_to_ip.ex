@@ -1,8 +1,8 @@
-defmodule ConfigUtil.BindToIp do
+defmodule PhxConfigUtil.BindToIp do
   @moduledoc """
   Parse shortcuts or string representations to IP addresses.
 
-  # ConfigUtil.BindToIp.parse!/1
+  # PhxConfigUtil.BindToIp.parse!/1
 
   Expects a string representation of an IP address
   or one of the following shortcuts:
@@ -16,19 +16,19 @@ defmodule ConfigUtil.BindToIp do
 
   ## Examples
 
-      iex> ConfigUtil.BindToIp.parse!("all4")
+      iex> PhxConfigUtil.BindToIp.parse!("all4")
       {0, 0, 0, 0}
 
-      iex> ConfigUtil.BindToIp.parse!("local4")
+      iex> PhxConfigUtil.BindToIp.parse!("local4")
       {127, 0, 0, 1}
 
-      iex> ConfigUtil.BindToIp.parse!("all6")
+      iex> PhxConfigUtil.BindToIp.parse!("all6")
       {0, 0, 0, 0, 0, 0, 0, 0}
 
-      iex> ConfigUtil.BindToIp.parse!("local6")
+      iex> PhxConfigUtil.BindToIp.parse!("local6")
       {0, 0, 0, 0, 0, 0, 0, 1}
 
-      iex> ConfigUtil.BindToIp.parse!("172.16.0.1")
+      iex> PhxConfigUtil.BindToIp.parse!("172.16.0.1")
       {172, 16, 0, 1}
   """
   def parse!(bind) do

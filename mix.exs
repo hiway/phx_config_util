@@ -1,9 +1,9 @@
-defmodule ConfigUtil.MixProject do
+defmodule PhxConfigUtil.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :config_util,
+      app: :phx_config_util,
       description: description(),
       package: package(),
       version: "0.1.0",
