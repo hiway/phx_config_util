@@ -4,9 +4,11 @@ defmodule PhxConfigUtil.MixProject do
   def project do
     [
       app: :phx_config_util,
+      version: "0.1.0",
+      source_url: "https://github.com/hiway/phx_config_util/",
+      homepage_url: "https://github.com/hiway/phx_config_util/",
       description: description(),
       package: package(),
-      version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -23,7 +25,8 @@ defmodule PhxConfigUtil.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:net_address, "~> 0.3.1"}
+      {:net_address, "~> 0.3.1"},
+      {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
   end
 
